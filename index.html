@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>“争做小小好网民”知识竞赛</title>
+    <script src="static/flexible.js"></script>
+    <script src="static/layer.js"></script>
+    <script type="text/javascript">
+      var wx_tk = '';
+      var $_GET = (function(){
+          var url = window.document.location.href.toString();
+          var u = url.split("?");
+          if(typeof(u[1]) == "string"){
+              u = u[1].split("&");
+              var get = {};
+              for(var i in u){
+                  var j = u[i].split("=");
+                  get[j[0]] = j[1];
+              }
+              return get;
+          }else{
+              return {};
+          }
+      })();
+      var wx_tk= sessionStorage.getItem("wx_tk");
+      if(wx_tk == null || wx_tk == undefined){
+        sessionStorage.setItem("wx_tk", 0);
+        window.location.href='/new/index.php?nova_p=QWNIMFRZbmsxZWlFd0hBa3R0SlY3SkNTa2N3aFRmVEk3TSt3THc0aXNnUT0@';
+      }
+      if(wx_tk == 0){
+        sessionStorage.setItem("wx_tk", $_GET['wx_tk']);
+        wx_tk = $_GET['wx_tk'];
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
