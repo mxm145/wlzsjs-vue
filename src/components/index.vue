@@ -21,7 +21,6 @@ export default{
         this.$store.commit('SET_OPENID', res.data.openid)
       }
     })
-
   }
 }
 </script>

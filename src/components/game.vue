@@ -85,9 +85,11 @@ export default {
 
         if (isPass) {
           if (this.stage < 5) {
-            const nextStage = this.stage + 1
-            this.$store.commit('SET_STAGE', nextStage)
-            this.$router.replace('/tip')
+            setTimeout(() => {
+              const nextStage = this.stage + 1
+              this.$store.commit('SET_STAGE', nextStage)
+              this.$router.replace('/tip')
+            }, 500)
           }else{
             this.$router.replace('/pass')
           }
@@ -147,19 +149,19 @@ ul,li{padding: 0;margin: 0;list-style: none}
 }
 .lic2
 {
-  width: 2.917rem;
+  width: 2.916rem;
   height: 4.375rem;
   float: left;
 }
 .lic3
 {
-  width: 2.917rem;
+  width: 2.916rem;
   height: 2.917rem;
   float: left;
 }
 .lic4
 {
-  width: 2.917rem;
+  width: 2.916rem;
   height: 2.1875rem;
   float: left;
 }
