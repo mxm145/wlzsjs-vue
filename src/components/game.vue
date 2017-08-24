@@ -32,25 +32,20 @@ export default {
     if (this.stage == 1) {
       this.initArr = [1, 2, 3, 4]
       this.selCls = [0, 0, 0, 0]
-      this.num = Math.ceil(Math.random() * 4)
     }else if (this.stage == 2) {
       this.initArr = [1, 2, 3, 4, 5, 6]
       this.selCls = [0, 0, 0, 0, 0, 0]
-      this.num = Math.ceil(Math.random() * 4)
     }else if (this.stage == 3) {
       this.initArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
       this.selCls = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-      this.num = Math.ceil(Math.random() * 4)
     }else if (this.stage == 4) {
       this.initArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
       this.selCls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      this.num = Math.ceil(Math.random() * 4)
     }else if (this.stage == 5) {
       this.initArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
       this.selCls = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      this.num = Math.ceil(Math.random() * 5)
     }
-
+    this.num = Math.ceil(Math.random() * 4)
     this.lic = 'lic' + this.stage
     this.thumbnail = require('../assets/images/stage'+this.stage+'/'+this.num+'-1.jpg')
     this.level = require('../assets/images/stage'+this.stage+'/level.png')

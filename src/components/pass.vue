@@ -7,15 +7,23 @@
 <script>
 export default{
   name: 'pass',
+  data(){
+    return{
+      click: true
+    }
+  },
   methods: {
     award(){
-      this.$store.dispatch('GET_AWARD').then((res) => {
-        if(res.data.status == 'failure'){
-          this.$router.replace('/failure')
-        }else if(res.data.status == 'success'){
-          this.$router.replace('/success')
-        }
-      })
+      if (this.click) {
+        this.click = false
+        this.$store.dispatch('GET_AWARD').then((res) => {
+          if(res.data.status == 'failure'){
+            this.$router.replace('/failure')
+          }else if(res.data.status == 'success'){
+            this.$router.replace('/success')
+          }
+        })
+      }
     }
   }
 }

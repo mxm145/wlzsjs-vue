@@ -8,20 +8,7 @@
 <script>
 import axios from 'axios'
 export default{
-  name: 'index',
-  mounted(){
-    const wx_tk= sessionStorage.getItem("wx_tk");
-    axios.get('/new/index.php?nova_p=QWNIMFRZbmsxZWlFd0hBa3R0SlY3RDRuZG15cTFhTXNHc0p0T0x3SXpoQT0@', {params: {wx_tk: wx_tk}}).then((res) => {
-      if(res.data.subscribe == 0){
-        layer.open({
-          content: '<img src="static/ewm.jpg" style="max-width:100%">温馨提示：开始游戏前请先识别二维码关注“云南网”微信公众号，以便抽到的“学习鼓励金”能及时通过公众号后台发送到您账户。',
-          shadeClose: false
-        });
-      }else{
-        this.$store.commit('SET_OPENID', res.data.openid)
-      }
-    })
-  }
+  name: 'index'
 }
 </script>
 <style scoped>

@@ -13,11 +13,7 @@ const store = new Vuex.Store({
   },
   actions: {
     GET_AWARD: ({state}) => {
-      if (state.openid != '') {
-        return axios.post('/new/index.php?nova_p=QWNIMFRZbmsxZWlFd0hBa3R0SlY3T003eEQwbnBSYmRGaUVvMm9obGIyaz0@', qs.stringify({openid: state.openid}))
-      }else{
-        return Promise.resolve({data: {status: 'failure'}})
-      }
+      return Promise.resolve({data: {status: 'failure'}})
     }
   },
   mutations: {
